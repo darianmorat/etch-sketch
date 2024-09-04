@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Etch sketch</title>
+   <link rel="stylesheet" href="styles/reset.css" />
+   <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+   <h1 class="title">ETCH SKETCH</h1>
+
+   <div class="container">
+      <div class="board"></div>
+      <div class="controls">
+         <input class="color-picker" type="color" value="#333333" />
+         <button class="btn color-btn" onclick="changeColor('color-btn')">Color</button>
+         <button class="btn rainbow-btn" onclick="changeColor('rainbow-btn')">Rainbow</button>
+         <button class="btn eraser-btn" onclick="changeColor('eraser-btn')">Eraser</button>
+         <button class="btn reset-btn" onclick="resetBoard()">Reset</button>
+         <br>
+         <hr>
+         <div class="size-board">
+            <p class="size-text"><span class="number-size">10 x 10</span></p>
+            <input class="user-input" value="10" type="range" min="1" max="50" oninput="changeSize(this.value)" />
+         </div>
+      </div>
+   </div>
+   <script src="scripts/main.js"></script>
+</body>
+
+</html>
